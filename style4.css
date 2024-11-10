@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: darkgreen;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.content {
+    margin-left: 220px;
+    padding: 16px;
+}
+
+/* Style the active link */
+.sidebar a.active {
+    background-color: #4CAF50;
+    color: white;
+}

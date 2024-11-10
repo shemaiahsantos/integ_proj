@@ -1,0 +1,148 @@
+/* style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('background.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 400px; /* Adjusted max-width for better appearance */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 30px; /* Adjusted padding */
+    border-radius: 20px;
+    position: relative;
+}
+
+.form h1 {
+    font-size: 26px; /* Adjusted font size */
+    color: darkgreen; /* Changed color to dark green */
+    font-weight: 600;
+    letter-spacing: -1px;
+    text-align: center; /* Centered text */
+    margin-bottom: 20px;
+}
+
+.form label {
+    position: relative;
+}
+
+.form label .input {
+    width: 100%; /* Adjusted width */
+    padding: 12px; /* Adjusted padding */
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.form label span {
+    position: absolute;
+    left: 12px; /* Adjusted position */
+    top: -20px;
+    color: #666;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+}
+
+.form label .input:valid + span {
+    color: green;
+}
+
+.submit {
+    width: 100%;
+    padding: 10px;
+    background-color: darkgreen; /* Changed background color to dark green */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: darkgreen; /* Ensured hover color stays dark green */
+}
+
+.signin {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.signin a {
+    color: darkgreen; /* Changed link color to dark green */
+    text-decoration: none;
+}
+
+.signin a:hover {
+    text-decoration: underline;
+}
